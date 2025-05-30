@@ -1,0 +1,31 @@
+# Mad Libs Generator with Conditionals
+# Step 1: Get user input
+adj1 = input("Enter an adjective (e.g., sunny, bright): ")
+adj2 = input("Enter another adjective (e.g., funny, wild): ")
+adj3 = input("Enter a third adjective: ")
+adj4 = input("Enter one more adjective: ")
+animal = input("What’s your favorite animal? ")
+color = input("Name a color you like: ")
+mood = input("How are you feeling today? (happy, tired, excited, etc.): ")
+
+# Step 2: Story with placeholders
+story = f"""
+On a beautiful {adj1} day, I went to the zoo.
+I saw a {adj2} {animal} swinging from the trees wearing a {color} hat!
+Then, I spotted a majestic {adj3} lion lounging in the sun.
+What a wild and {adj4} experience!
+"""
+
+# Step 3: Conditional ending
+if mood.lower() == "happy":
+    story += "\nIt was the best day ever! I couldn't stop smiling. 😄"
+elif mood.lower() == "tired":
+    story += "\nIt was fun, but I really needed a nap after all that excitement. 😴"
+elif mood.lower() == "excited":
+    story += "\nI was so pumped, I wanted to tell everyone about my zoo adventure! 🚀"
+else:
+    story += f"\nDespite feeling {mood}, I enjoyed the day at the zoo in my own way."
+
+# Step 4: Display the final story
+print("\n🎉 Your Mad Libs Story 🎉")
+print(story)
